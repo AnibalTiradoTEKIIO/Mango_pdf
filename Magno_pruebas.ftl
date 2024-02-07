@@ -83,13 +83,13 @@
                                     <#if record.custbody_efx_fe_logoloc?has_content>
                                         <#assign "dominio" = "https://system.netsuite.com">
                                         <#assign "urldir" = "https://system.netsuite.com"+record.custbody_efx_fe_logoloc>
-                                        <img height="80px" src="${urldir}"/>
+                                        <img height="80px" width="200px" src="${urldir}"/>
                                     </#if>
                                 <#else>
                                     <#if record.custbody_efx_fe_logosub?has_content>
                                         <#assign "dominio" = "https://system.netsuite.com">
                                         <#assign "urldir" = "https://system.netsuite.com"+record.custbody_efx_fe_logosub>
-                                        <img height="80px" src="${urldir}"/>
+                                        <img height="80px" width="200px" src="${urldir}"/>
                                     </#if>
                                 </#if>
 
@@ -98,18 +98,18 @@
                                     <#if record.custbody_efx_fe_logoloc?has_content>
                                         <#assign "dominio" = "https://system.netsuite.com">
                                         <#assign "urldir" = "https://system.netsuite.com"+record.custbody_efx_fe_logoloc>
-                                        <img height="80px" src="${urldir}"/>
+                                        <img height="80px" width="200px"  src="${urldir}"/>
                                     </#if>
                                 <#else>
                                     <#if record.custbody_efx_fe_logosub?has_content>
                                         <#assign "dominio" = "https://system.netsuite.com">
                                         <#assign "urldir" = "https://system.netsuite.com"+record.custbody_efx_fe_logosub>
-                                        <img height="80px" src="${urldir}"/>
+                                        <img height="80px" width="200px" src="${urldir}"/>
                                     <#else>
                                         <#if infoEmpresa.logo@url?length != 0>
                                             <span><img height="80px" src="${infoEmpresa.logo@url}"/></span>
                                         <#elseif companyInformation.logoUrl?length != 0>
-                                            <img height="80px" src="${companyInformation.logoUrl}"/>
+                                            <img height="80px" width="200px" src="${companyInformation.logoUrl}"/>
                                         </#if>
                                     </#if>
                                 </#if>
