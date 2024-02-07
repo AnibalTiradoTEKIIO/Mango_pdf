@@ -126,7 +126,9 @@
                         <td colspan="1">&nbsp;</td>
                         <td colspan="4" style="font-size: 10px;" align="right"><span style="font-size: 12px;"><strong>Nota de Crédito</strong></span><br/>
                             <#if dataXML?has_content>
-                                <#assign folio_tran = dataXML.atributos.Serie +""+ dataXML.atributos.Folio>
+                            <#--  En este campo, "serie" no existe dentro del XML, es por eso que directamente no mostraba nada  -->
+                                <#--  <#assign folio_tran = dataXML.atributos.Serie +""+ dataXML.atributos.Folio>   -->
+                                <#assign folio_tran =dataXML.atributos.Folio>
                                 <span class="number" style="font-size: 18px;">${folio_tran}</span>
                                 <br/> <br/>Fecha y hora de emisi&oacute;n<br/>${dataXML.atributos.Fecha}<br/>
                             <#else>
@@ -134,7 +136,7 @@
                                 <br/> <br/>Fecha y hora de emisi&oacute;n<br/>${record.createdDate}<br/>
                             </#if>
 
-
+ 
                         </td>
                         <td align="right">
                             <span class="number"></span>
